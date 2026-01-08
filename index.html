@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ImageFinder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo" onclick="goHome()">ImageFinder</div>
+
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" id="hamburger">☰</div>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a onclick="home()">Home</a></li>
+        <li><a onclick="explore()">Explore</a></li>
+        <li><a onclick="openAbout()">About</a></li>
+    </ul>
+</nav>
+
+
+
+
+
+<!-- MAIN LAYOUT -->
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <!-- <li><a onclick="searchImages()">Search Images</a></li> -->
+            <li><a onclick="trending()">Trending</a></li>
+            <!-- <li><a onclick="gallery()">Favorites</a></li> -->
+            <li><a onclick="collections('Technology')">Technology</a></li>
+             <li><a onclick="openAbout()">About</a></li>
+        </ul>
+    </aside>
+
+    <!-- CONTENT -->
+    <main class="content">
+        <h1 id="section-title">Home</h1>
+
+        <form id="search-form">
+            <input type="text" id="search-box" placeholder="Search anything here...">
+            <button type="submit">Search</button>
+        </form>
+
+        <div id="search-result"></div>
+        <button id="show-more-btn" type="button">Show More</button>
+    </main>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <p>© 2025 ImageFinder | Designed by Hamna</p>
+</footer>
+<!-- ABOUT MODAL -->
+<div id="about-modal" class="modal">
+    <div class="modal-content large">
+        <span onclick="closeAbout()" class="close-btn">×</span>
+
+        <h2>About ImageFinder</h2>
+
+        <p class="tagline">
+            Discover, explore, and save high-quality images powered by Unsplash.
+        </p>
+
+        <div class="about-grid">
+            <div>
+                <h3>📌 Project Overview</h3>
+                <p>
+                    ImageFinder is a modern web-based image search engine built
+                    using HTML, CSS, and JavaScript. It allows users to search,
+                    explore trending images, and save favorites using the
+                    Unsplash API.
+                </p>
+            </div>
+
+            <div>
+                <h3>⚙️ Features</h3>
+                <ul>
+                    <li>🔍 Smart image search</li>
+                    <li>🔥 Trending & explore sections</li>
+                    <li>❤️ Save favorites (Local Storage)</li>
+                    <li>🎨 Modern UI/UX design</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>🛠 Technologies Used</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (ES6)</li>
+                    <li>Unsplash API</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>🎓 Academic Purpose</h3>
+                <p>
+                    This project is developed as part of the
+                    <strong>BSSE Frontend Development</strong> coursework,
+                    demonstrating API integration, UI/UX principles, and
+                    client-side functionality.
+                </p>
+            </div>
+        </div>
+
+        <button class="about-btn" onclick="closeAbout()">Close</button>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
